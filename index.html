@@ -2,25 +2,38 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Thiệp Sinh Nhật</title>
+    <title>Thiệp 2/9</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="base.css">
 </head>
 <body>
-    <div class="envelope" id="envelope">
+    <div class="envelope open" id="envelope">
         <div class="envelope-flap"></div>
         <div class="envelope-front"></div>
         <div class="envelope-left"></div>
         <div class="envelope-right"></div>
         <div class="birthday-card">
-            <h1>🎂 Chúc mừng sinh nhật! 🎉</h1>
-            <p>Chúc bạn luôn vui vẻ, hạnh phúc và thành công!</p>
+            <h1>Chúc mừng Quốc khánh 2/9 🎆</h1>
+            <p>Kính chúc mọi người một ngày lễ thật nhiều niềm vui, tự hào dân tộc và hạnh phúc!</p>
         </div>
     </div>
+
+    <!-- Hiệu ứng pháo giấy -->
+    <div class="confetti"></div>
+
     <script>
         document.getElementById('envelope').addEventListener('click', function () {
             this.classList.toggle('open');
         });
+
+        // Tạo pháo giấy bay xuống
+        const confettiContainer = document.querySelector('.confetti');
+        for (let i = 0; i < 80; i++) {
+            let span = document.createElement('span');
+            span.style.left = Math.random() * 100 + 'vw';
+            span.style.animationDelay = Math.random() * 5 + 's';
+            confettiContainer.appendChild(span);
+        }
     </script>
 </body>
 </html>

@@ -1,14 +1,4 @@
-body {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: radial-gradient(circle at 60% 40%, #ffe0e0 0%, #f2f2f2 100%);
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
+/* ✉️ Phong bì */
 .envelope {
     position: relative;
     width: 340px;
@@ -24,65 +14,59 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 0;
-    height: 0;
+    width: 0; height: 0;
     border-left: 170px solid transparent;
     border-right: 170px solid transparent;
-    border-bottom: 90px solid #ffe0b2;
+    border-bottom: 90px solid #f44336; /* đỏ */
     z-index: 4;
     transition: transform 0.7s cubic-bezier(.68,-0.55,.27,1.55);
     transform-origin: bottom center;
-    box-shadow: 0 4px 16px rgba(211,47,47,0.10);
-    transform: rotateX(110deg); /* Nắp mở ra */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
 
 .envelope-front {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 0; bottom: 0;
     width: 340px;
     height: 120px;
-    background: #ffe6e6;
+    background: #ffeb3b; /* vàng */
     border-radius: 0 0 18px 18px;
     z-index: 3;
-    box-shadow: 0 8px 32px rgba(211,47,47,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
-    border-bottom: 3px solid #f8bbd0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    border-bottom: 3px solid #fbc02d;
 }
 
 .envelope-left, .envelope-right {
     position: absolute;
     bottom: 0;
-    width: 0;
-    height: 0;
+    width: 0; height: 0;
     border-top: 60px solid transparent;
     border-bottom: 60px solid transparent;
     z-index: 2;
 }
 .envelope-left {
     left: 0;
-    border-right: 85px solid #ffe6e6;
-    border-radius: 0 0 0 18px;
+    border-right: 85px solid #ffeb3b;
 }
 .envelope-right {
     right: 0;
-    border-left: 85px solid #ffe6e6;
-    border-radius: 0 0 18px 0;
+    border-left: 85px solid #ffeb3b;
 }
 
-/* Thiệp sinh nhật */
+/* 📜 Thiệp */
 .birthday-card {
     position: absolute;
     left: 50%;
     top: 60px;
-    transform: translate(-50%, 40px) scale(0.95);
-    max-width: 260px;
+    transform: translate(-50%, 0) scale(1);
+    max-width: 280px;
     width: 85%;
-    background: linear-gradient(135deg, #fffbe6 60%, #ffe0e0 100%);
+    background: linear-gradient(135deg, #fff 70%, #ffe082 100%);
     border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(211,47,47,0.13), 0 1.5px 6px rgba(0,0,0,0.09);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
     padding: 32px 18px 24px 18px;
     text-align: center;
-    border: 2.5px solid #f8bbd0;
+    border: 3px solid #f44336;
     opacity: 1;
     pointer-events: auto;
     animation: card-pop 0.7s cubic-bezier(.68,-0.55,.27,1.55);
@@ -92,14 +76,13 @@ body {
 .birthday-card h1 {
     color: #d32f2f;
     margin-bottom: 14px;
-    font-size: 1.5em;
-    letter-spacing: 1px;
-    font-family: 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
-    text-shadow: 0 2px 8px #ffe0e0;
+    font-size: 1.4em;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 .birthday-card p {
-    color: #7c5a1a;
+    color: #333;
     font-size: 1.05em;
     line-height: 1.6;
     margin-bottom: 0;
@@ -107,73 +90,133 @@ body {
 }
 
 .birthday-card::before {
-    content: "🎈🎂🎉";
+    content: "🎆🎇✨";
     display: block;
     font-size: 1.5em;
     margin-bottom: 10px;
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
-/* ...existing code... */
-
-/* Mặc định: NẮP MỞ, THIỆP HIỆN */
-.envelope-flap {
-    transform: rotateX(0deg); /* Nắp mở ra */
-}
-.birthday-card {
-    opacity: 1;
-    transform: translate(-50%, 0) scale(1);
-    pointer-events: auto;
-    animation: card-pop 0.7s cubic-bezier(.68,-0.55,.27,1.55);
-}
-
-/* Khi có .open: NẮP ĐÓNG, THIỆP ẨN */
-.envelope.open .envelope-flap {
-    transform: rotateX(110deg);
-}
+/* Animation thiệp */
+.envelope-flap { transform: rotateX(0deg); }
+.envelope.open .envelope-flap { transform: rotateX(110deg); }
 .envelope.open .birthday-card {
     opacity: 0;
     transform: translate(-50%, 40px) scale(0.95);
     pointer-events: none;
     animation: none;
 }
+
 @keyframes card-pop {
     0% { transform: translate(-50%, 60px) scale(0.8); opacity: 0; }
     80% { transform: translate(-50%, -8px) scale(1.05); opacity: 1; }
     100% { transform: translate(-50%, 0) scale(1); }
 }
 
+/* 🎉 Confetti (pháo giấy bay) */
+.confetti span {
+    position: fixed;
+    top: -10px;
+    width: 8px; height: 14px;
+    background: red;
+    opacity: 0.8;
+    animation: fall 5s linear infinite;
+}
+.confetti span:nth-child(even) { background: yellow; }
+
+@keyframes fall {
+    to { transform: translateY(110vh) rotate(360deg); }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
     .envelope, .envelope-front {
-        width: 95vw;
+        width: 92vw;
         min-width: 0;
-        max-width: 100vw;
+        max-width: 98vw;
     }
     .envelope-flap {
-        border-left: 47.5vw solid transparent;
-        border-right: 47.5vw solid transparent;
-        border-bottom: 50px solid #ffe0b2;
+        width: 92vw;
+        border-left: 46vw solid transparent;
+        border-right: 46vw solid transparent;
+        border-bottom: 24vw solid #ffe0b2;
+        border-radius: 0 0 8vw 8vw;
+        left: 0;
     }
     .envelope-front {
-        height: 60px;
-        border-radius: 0 0 12px 12px;
+        height: 28vw;
+        border-radius: 0 0 8vw 8vw;
+        left: 0;
     }
     .envelope-left, .envelope-right {
-        border-top: 30px solid transparent;
-        border-bottom: 30px solid transparent;
-        border-right-width: 40vw;
-        border-left-width: 40vw;
+        border-top: 14vw solid transparent;
+        border-bottom: 14vw solid transparent;
+        border-right-width: 18vw;
+        border-left-width: 18vw;
+        border-radius: 0 0 0 8vw;
     }
+    .envelope-left { left: 0; }
+    .envelope-right { right: 0; }
     .birthday-card {
-        padding: 14px 4vw 10px 4vw;
-        max-width: 90vw;
-        border-radius: 10px;
-        font-size: 0.95em;
+        padding: 6vw 4vw 6vw 4vw;
+        max-width: 80vw;
+        border-radius: 6vw;
+        font-size: 1em;
+        top: 18vw;
     }
     .birthday-card h1 {
-        font-size: 1em;
+        font-size: 1.1em;
     }
     .birthday-card p {
-        font-size: 0.95em;
+        font-size: 0.98em;
     }
+}
+/* 🇻🇳 Nền Quốc khánh lung linh */
+body {
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Nền gradient động đỏ - vàng */
+    background: linear-gradient(135deg, #d32f2f, #fdd835, #c62828, #fbc02d);
+    background-size: 400% 400%;
+    animation: bgAnimation 12s ease infinite;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Gradient nền chạy */
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ✨ Hiệu ứng pháo hoa sáng */
+body::before, body::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(2px 2px at 20% 30%, white, transparent),
+                      radial-gradient(2px 2px at 40% 70%, yellow, transparent),
+                      radial-gradient(3px 3px at 60% 20%, orange, transparent),
+                      radial-gradient(2px 2px at 80% 60%, white, transparent);
+    animation: twinkle 8s linear infinite;
+    opacity: 0.7;
+    z-index: -100;
+}
+
+body::after {
+    animation-delay: 4s;
+}
+
+@keyframes twinkle {
+    from { transform: translateY(0); }
+    to { transform: translateY(-20px); }
 }
