@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Thiệp 2/9</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="base.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./main.css">
+  <title>Mừng ngày 2 tháng 9</title>
 </head>
 <body>
-    <div class="envelope open" id="envelope">
-        <div class="envelope-flap"></div>
-        <div class="envelope-front"></div>
-        <div class="envelope-left"></div>
-        <div class="envelope-right"></div>
-        <div class="birthday-card">
-            <h1>Chúc mừng Quốc khánh 2/9 🎆</h1>
-            <p>Kính chúc mọi người một ngày lễ thật nhiều niềm vui, tự hào dân tộc và hạnh phúc!</p>
-        </div>
+  <div class="startForm">
+    <div class="startLetter">
+      <div class="contentLetter"></div>
+      <img class="myAI" src="" alt="">
+      <div class="sticker"></div>
     </div>
+  </div>
 
-    <!-- Hiệu ứng pháo giấy -->
-    <div class="confetti"></div>
+  <!-- Nút Feedback dưới góc phải -->
+<button id="feedback-btn-bottom" class="feedback-btn-bottom">Feedback</button>
+<div id="feedback-modal-bottom" class="feedback-modal">
+  <div class="feedback-content">
+    <span id="feedback-close-bottom" class="feedback-close">&times;</span>
+    <h2>Gửi phản hồi</h2>
+    <form id="feedback-form-bottom">
+      <label for="fb-name-bottom">Tên:</label>
+      <input type="text" id="fb-name-bottom" name="fb-name-bottom" required>
+      <label for="fb-message-bottom">Lời nhắn:</label>
+      <textarea id="fb-message-bottom" name="fb-message-bottom" rows="3" required></textarea>
+      <button type="submit">Gửi</button>
+    </form>
+  </div>
+</div>
 
-    <script>
-        document.getElementById('envelope').addEventListener('click', function () {
-            this.classList.toggle('open');
-        });
 
-        // Tạo pháo giấy bay xuống
-        const confettiContainer = document.querySelector('.confetti');
-        for (let i = 0; i < 80; i++) {
-            let span = document.createElement('span');
-            span.style.left = Math.random() * 100 + 'vw';
-            span.style.animationDelay = Math.random() * 5 + 's';
-            confettiContainer.appendChild(span);
-        }
-    </script>
+  <script src="./index.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
