@@ -2,14 +2,25 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Cảm ơn các bạn!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Thêm dòng này -->
+    <title>Thiệp Sinh Nhật</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="base.css">
 </head>
 <body>
-    <div class="thankyou-container">
-        <h1>Cảm ơn các bạn đã xem!</h1>
-        <p>Chúc mừng ngày 2/9/2025 - Quốc khánh Việt Nam!</p>
+    <div class="envelope" id="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-left"></div>
+        <div class="envelope-right"></div>
+        <div class="birthday-card">
+            <h1>🎂 Chúc mừng sinh nhật! 🎉</h1>
+            <p>Chúc bạn luôn vui vẻ, hạnh phúc và thành công!</p>
+        </div>
     </div>
+    <script>
+        document.getElementById('envelope').addEventListener('click', function () {
+            this.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
