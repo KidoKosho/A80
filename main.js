@@ -1,15 +1,15 @@
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbzASSgLN5RHZGpNwxhxXXQP1lwE3EA_OswEaj3D3r2L9ODmzwxIBXEymn7ogVcYiB4o/exec"
-
-// Đóng modal (nút X)
+document.getElementById('feedback-btn-bottom').onclick = function() {
+    document.getElementById('feedback-modal-bottom').classList.add('active');
+};
 document.getElementById('feedback-close-bottom').onclick = function() {
     document.getElementById('feedback-modal-bottom').classList.remove('active');
 };
-
-// Đóng modal khi click ra ngoài
 document.getElementById('feedback-modal-bottom').onclick = function(e) {
     if (e.target === this) this.classList.remove('active');
 };
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbyuJFtCjTyzQQeJk6Uyfy-MY7K6z7kJU9vPn6DJqYpk93DkIdAsRexMCC6caqyItfnt/exec"
 
 // Gửi form
 document.getElementById('feedback-form-bottom').onsubmit = function(e) {
