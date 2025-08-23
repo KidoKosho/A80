@@ -1,5 +1,9 @@
 body {
-    background: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f2f2f2 0%, #ffe0e0 100%);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,24 +11,32 @@ body {
 
 .thankyou-container {
     max-width: 500px;
-    margin: 100px auto;
+    width: 100%;
     background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(211,47,47,0.10), 0 1.5px 6px rgba(0,0,0,0.06);
+    padding: 48px 32px;
     text-align: center;
+    border: 2px solid #ffd6d6;
+    transition: box-shadow 0.3s;
+}
+
+.thankyou-container:hover {
+    box-shadow: 0 12px 40px rgba(211,47,47,0.18), 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .thankyou-container h1 {
     color: #d32f2f;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    font-size: 2em;
+    letter-spacing: 1px;
 }
 
 .thankyou-container p {
-    color: #333;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 24px;
+    color: #444;
+    font-size: 1.15em;
+    line-height: 1.6;
+    margin-bottom: 0;
 }
 
 .thankyou-container a {
@@ -59,12 +71,13 @@ body {
 
 @media (max-width: 600px) {
     .thankyou-container {
-        padding: 24px 8px;
-        margin: 40px 8px;
+        padding: 28px 8px;
+        margin: 0 8px;
         max-width: 100%;
+        border-radius: 12px;
     }
     .thankyou-container h1 {
-        font-size: 1.4em;
+        font-size: 1.3em;
     }
     .thankyou-container p {
         font-size: 1em;
