@@ -65,4 +65,5 @@ window.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', playMusic);
     document.addEventListener('touchstart', playMusic);
   });
+    
 });
