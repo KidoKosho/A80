@@ -14,6 +14,7 @@
   <title>Mừng ngày 2 tháng 9</title>
 </head>
 <body>
+    <audio id="bg-music" src="cogidephon.mp3" autoplay loop></audio>
   <div class="startForm">
     <div class="startLetter">
       <div class="contentLetter"></div>
@@ -29,12 +30,20 @@
     <span id="feedback-close-bottom" class="feedback-close">&times;</span>
     <h2>Gửi phản hồi</h2>
     <form id="feedback-form-bottom">
-      <label for="fb-name-bottom">Tên:</label>
-      <input type="text" id="fb-name-bottom" name="fb-name-bottom" required>
-      <label for="fb-message-bottom">Lời nhắn:</label>
-      <textarea id="fb-message-bottom" name="fb-message-bottom" rows="3" required></textarea>
-      <button type="submit">Gửi</button>
-    </form>
+  <label for="fb-name-bottom">Tên:</label>
+  <input type="text" id="fb-name-bottom" name="fb-name-bottom" required>
+  
+  <label for="fb-message-bottom">Lời nhắn:</label>
+  <textarea id="fb-message-bottom" name="fb-message-bottom" rows="3" required></textarea>
+  
+  <!-- Loading nằm ngay trong form -->
+  <div id="feedback-loading-bottom" class="feedback-loading" style="display:none;">
+    <div class="spinner"></div>
+    <span>Đang gửi...</span>
+  </div>
+
+  <button type="submit" id="feedback-submit-btn">Gửi</button>
+</form>
   </div>
 </div>
 
