@@ -28,7 +28,7 @@ document.getElementById('feedback-form-bottom').onsubmit = function(e) {
     .then(res => res.json())
     .then(res => {
         if (res.result === "success") {
-            alert("✅ Cảm ơn bạn đã gửi phản hồi!");
+            alert("✅ Cảm ơn bạn đã gửi phản hồi!!");
             form.reset();
             document.getElementById('feedback-modal-bottom').classList.remove('active');
         } else {
