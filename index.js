@@ -3,7 +3,7 @@ const contentLetterSrart_actived = "Nhân dịp Quốc khánh 2-9, xin gửi t�
 
 // Gắn 1 đường link ảnh bất kì
 let imgStart = document.querySelector(".myAI"); //Hình ảnh xuất hiện trong lời mở đầu của bức thư
-imgStart.src = "./img/cute-young-boy-kid-wearing-vest-and-hat-free-png.png";
+imgStart.src = "./img/test1.png";
 
 
 const splitContentLetterSrart_actived = contentLetterSrart_actived.split("");
