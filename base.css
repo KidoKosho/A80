@@ -128,49 +128,6 @@
     to { transform: translateY(110vh) rotate(360deg); }
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-    .envelope, .envelope-front {
-        width: 92vw;
-        min-width: 0;
-        max-width: 98vw;
-    }
-    .envelope-flap {
-        width: 92vw;
-        border-left: 46vw solid transparent;
-        border-right: 46vw solid transparent;
-        border-bottom: 24vw solid #ffe0b2;
-        border-radius: 0 0 8vw 8vw;
-        left: 0;
-    }
-    .envelope-front {
-        height: 28vw;
-        border-radius: 0 0 8vw 8vw;
-        left: 0;
-    }
-    .envelope-left, .envelope-right {
-        border-top: 14vw solid transparent;
-        border-bottom: 14vw solid transparent;
-        border-right-width: 18vw;
-        border-left-width: 18vw;
-        border-radius: 0 0 0 8vw;
-    }
-    .envelope-left { left: 0; }
-    .envelope-right { right: 0; }
-    .birthday-card {
-        padding: 6vw 4vw 6vw 4vw;
-        max-width: 80vw;
-        border-radius: 6vw;
-        font-size: 1em;
-        top: 18vw;
-    }
-    .birthday-card h1 {
-        font-size: 1.1em;
-    }
-    .birthday-card p {
-        font-size: 0.98em;
-    }
-}
 /* 🇻🇳 Nền Quốc khánh lung linh */
 body {
     min-height: 100vh;
