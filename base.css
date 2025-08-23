@@ -56,3 +56,17 @@ body {
 .footer a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    .thankyou-container {
+        padding: 24px 8px;
+        margin: 40px 8px;
+        max-width: 100%;
+    }
+    .thankyou-container h1 {
+        font-size: 1.4em;
+    }
+    .thankyou-container p {
+        font-size: 1em;
+    }
+}
