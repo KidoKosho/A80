@@ -1,0 +1,58 @@
+body {
+    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.thankyou-container {
+    max-width: 500px;
+    margin: 100px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.thankyou-container h1 {
+    color: #d32f2f;
+    margin-bottom: 16px;
+}
+
+.thankyou-container p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.thankyou-container a {
+    display: inline-block;
+    background: #d32f2f;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.thankyou-container a:hover {
+    background: #b71c1c;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 32px;
+    color: #777;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #d32f2f;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
