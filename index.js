@@ -24,6 +24,12 @@ setTimeout(function () { //Hiệu ứng gõ chữ cho phần mở đầu của b
         })
     }, 1000)
 }, 1000)
+document.querySelectorAll("textarea").forEach(el => {
+  el.addEventListener("input", function() {
+    this.style.height = "auto";
+    this.style.height = this.scrollHeight + "px";
+  });
+});
 
 // Animation Drop light _ Tạo hiệu ứng kim tuyến rơi
 //Bạn có thể thiết kế lại để trông chân thật hơn nhé, thiết kế của mình hơi bị cứng và thiếu sự tự nhiên
