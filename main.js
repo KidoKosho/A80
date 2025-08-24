@@ -54,6 +54,18 @@ document.getElementById('feedback-form-bottom').onsubmit = function(e) {
 };
 window.addEventListener('DOMContentLoaded', function() {
   const audio = document.getElementById('bg-music');
+
+  this.alert("Chúc các bạn 2/9 vui vẻ! Nhớ gửi phản hồi cho mình nhé!");
   // Thử phát nhạc ngay khi trang load
-  audio.play();
+  audio.play().catch(() => {
+    // Nếu bị chặn, phát lại khi người dùng click bất kỳ đâu
+    const playMusic = () => {
+      audio.play();
+      document.removeEventListener('click', playMusic);
+      document.removeEventListener('touchstart', playMusic);
+    };
+    document.addEventListener('click', playMusic);
+    document.addEventListener('touchstart', playMusic);
+  });
+    
 });
