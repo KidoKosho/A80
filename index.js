@@ -8,7 +8,7 @@ imgStart.src = "./img/test1.png";
 
 const splitContentLetterSrart_actived = contentLetterSrart_actived.split("");
 
-setTimeout(function () { //Hiệu ứng gõ chữ cho phần mở đầu của bức thư
+function Start() { //Hiệu ứng gõ chữ cho phần mở đầu của bức thư
     document.querySelector(".contentLetter").innerHTML = "";
     document.querySelector(".startLetter").classList.add("active")
     setTimeout(() => {
@@ -23,7 +23,7 @@ setTimeout(function () { //Hiệu ứng gõ chữ cho phần mở đầu của b
             }, 50 * index)
         })
     }, 1000)
-}, 1000)
+}
 document.querySelectorAll("textarea").forEach(el => {
   el.addEventListener("input", function() {
     this.style.height = "auto";

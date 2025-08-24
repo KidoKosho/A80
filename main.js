@@ -116,3 +116,22 @@ function initApp() {
 // Chờ user click/touch lần đầu
 document.addEventListener('click', initApp);
 document.addEventListener('touchstart', initApp);
+
+// Hiện overlay khi vào trang
+document.body.classList.add('blurred');
+document.getElementById('overlay-start').style.display = 'flex';
+
+// Khi user chạm/click, ẩn overlay và chạy app
+function hideOverlayAndStart() {
+    const overlay = document.getElementById('overlay-start');
+    overlay.classList.add('hide');
+    setTimeout(() => overlay.style.display = 'none', 400);
+    document.body.classList.remove('blurred');
+    Start();
+    // Khởi động app (nếu cần)
+    if (typeof initApp === 'function') initApp();
+    document.removeEventListener('click', hideOverlayAndStart);
+    document.removeEventListener('touchstart', hideOverlayAndStart);
+}
+document.addEventListener('click', hideOverlayAndStart);
+document.addEventListener('touchstart', hideOverlayAndStart);
