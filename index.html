@@ -29,22 +29,23 @@
   <div class="feedback-content">
     <span id="feedback-close-bottom" class="feedback-close">&times;</span>
     <h2>Gửi phản hồi</h2>
-    <form id="feedback-form-bottom">
-  <label for="fb-name-bottom">Tên:</label>
-  <input type="text" id="fb-name-bottom" name="fb-name-bottom" required 
-       style="width:100%; padding:8px; font-size:16px;">
+  <form id="feedback-form-bottom">
+    <label for="fb-name-bottom">Tên:</label>
+    <input type="text" id="fb-name-bottom" name="Name" required 
+          style="width:100%; padding:8px; font-size:16px;">
 
-  <label for="fb-name-bottom">Tên:</label>
-  <textarea id="fb-name-bottom" name="fb-name-bottom" required 
-          style="width:100%; min-height:40px; resize: none;"></textarea>
-  <!-- Loading nằm ngay trong form -->
-  <div id="feedback-loading-bottom" class="feedback-loading" style="display:none;">
-    <div class="spinner"></div>
-    <span>Đang gửi...</span>
-  </div>
+    <label for="fb-message-bottom">Nội dung:</label>
+    <textarea id="fb-message-bottom" name="Content" required 
+              style="width:100%; min-height:40px; resize:none;"></textarea>
 
-  <button type="submit" id="feedback-submit-btn">Gửi</button>
-</form>
+    <!-- Loading -->
+    <div id="feedback-loading-bottom" class="feedback-loading" style="display:none;">
+      <div class="spinner"></div>
+      <span>Đang gửi...</span>
+    </div>
+
+    <button type="submit" id="feedback-submit-btn">Gửi</button>
+  </form>
 
   </div>
 </div>
