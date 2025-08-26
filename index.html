@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta property="og:title" content="Thiệp Mừng Quốc Khánh 2/9" />
+  <meta property="og:image" content="./6.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <!-- Google Fonts -->
@@ -31,22 +33,27 @@
     <span id="feedback-close-bottom" class="feedback-close">&times;</span>
     <h2>Gửi phản hồi</h2>
   <form id="feedback-form-bottom">
-    <label for="fb-name-bottom">Tên:</label>
-    <input type="text" id="fb-name-bottom" name="Name" required 
-          style="width:100%; padding:8px; font-size:16px;">
+  <label for="fb-name-bottom">Tên:</label>
+  <input type="text" id="fb-name-bottom" name="Name" required 
+        style="width:100%; padding:8px; font-size:16px;">
 
-    <label for="fb-message-bottom">Nội dung:</label>
-    <textarea id="fb-message-bottom" name="Content" required 
-              style="width:100%; min-height:40px; resize:none;"></textarea>
+        
+        <label for="fb-message-bottom">Nội dung:</label>
+        <textarea id="fb-message-bottom" name="Content" required 
+        style="width:100%; min-height:40px; resize:none;"></textarea>
+        <label for="fb-link-bottom">Link Facebook (không bắt buộc):</label>
+        <input type="url" id="fb-link-bottom" name="Facebook" 
+              placeholder="https://facebook.com/tenban"
+              style="width:100%; padding:8px; font-size:16px;">
 
-    <!-- Loading -->
-    <div id="feedback-loading-bottom" class="feedback-loading" style="display:none;">
-      <div class="spinner"></div>
-      <span>Đang gửi...</span>
-    </div>
+  <!-- Loading -->
+  <div id="feedback-loading-bottom" class="feedback-loading" style="display:none;">
+    <div class="spinner"></div>
+    <span>Đang gửi...</span>
+  </div>
 
-    <button type="submit" id="feedback-submit-btn">Gửi</button>
-  </form>
+  <button type="submit" id="feedback-submit-btn">Gửi</button>
+</form>
 
   </div>
 </div>
@@ -54,7 +61,7 @@
 
   <div id="overlay-start" class="overlay-start">
     <div class="overlay-content">
-      <p style="font-family: 'Times New Roman', Times, serif;">👆 Chạm vào màn hình để bắt đầu </p>
+      <p style="font-family: 'Times New Roman', Times, serif;">👆 Chạm vào màn hình để xem lời chúc cùng chúng mình nhé </p>
       <p style="font-family: 'Times New Roman', Times, serif; font-size:small; margin: 10px;">Các bạn xem xong hãy feedback cho chúng mình nhé <3</p>
     </div>
   </div>

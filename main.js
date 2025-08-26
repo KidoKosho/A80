@@ -11,8 +11,6 @@ document.getElementById('feedback-close-bottom').onclick = function() {
 document.getElementById('feedback-modal-bottom').onclick = function(e) {
     if (e.target === this) this.classList.remove('active');
 };
-
-// Xử lý gửi form
 document.getElementById('feedback-form-bottom').onsubmit = function(e) {
     e.preventDefault();
 
@@ -20,12 +18,12 @@ document.getElementById('feedback-form-bottom').onsubmit = function(e) {
     const loading = document.getElementById('feedback-loading-bottom');
     const submitBtn = document.getElementById('feedback-submit-btn');
 
-    // Hiện loading, ẩn nút gửi
     loading.style.display = "flex";
     submitBtn.style.display = "none";
 
     const data = {
         Name: form.querySelector('#fb-name-bottom').value,
+        Facebook: form.querySelector('#fb-link-bottom').value || "", // <-- thêm
         Content: form.querySelector('#fb-message-bottom').value
     };
 
@@ -81,7 +79,8 @@ function initApp() {
 
       const data = {
           Name: form.querySelector('#fb-name-bottom').value,
-          Content: form.querySelector('#fb-message-bottom').value
+          Content: form.querySelector('#fb-message-bottom').value,
+          Facebook: form.querySelector('#fb-link-bottom').value || "",
       };
 
       fetch(scriptURL, {
@@ -135,3 +134,8 @@ function hideOverlayAndStart() {
 }
 document.addEventListener('click', hideOverlayAndStart);
 document.addEventListener('touchstart', hideOverlayAndStart);
+
+  window.onload = function () {
+    alert("Trang web này do chúng mình làm mừng ngày 2/9, không do tổ chức hay có tính chất thương mại. Mong các bạn xem video vui vẻ và gửi lời chúc đến bạn bè, người thân, và nhớ gửi feedback về cho chúng mình nhé. Cảm ơn các bạn rất nhiều <3");
+  };d
+

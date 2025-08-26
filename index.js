@@ -18,7 +18,7 @@ function Start() { //Hiệu ứng gõ chữ cho phần mở đầu của bức t
                 if (index == contentLetterSrart_actived.length - 1) {
                     setTimeout(() => {
                         document.querySelector(".recieve").setAttribute("style", "opacity: 1; transition: .5s") 
-                    }, 1000)
+                    }, 900)
                 }
             }, 50 * index)
         })
